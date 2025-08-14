@@ -45,6 +45,5 @@ public class Main {
         FileWriter fileWriter = new FileWriterImpl();
         fileWriter.write(resultingReport, OUTPUT_FILE_PATH);
 
-        System.out.println("Report successfully generated at: " + OUTPUT_FILE_PATH);
     }
 }

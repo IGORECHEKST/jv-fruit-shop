@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.stream.Collectors;
 import service.FileReader;
 
 public class FileReaderImpl implements FileReader {
@@ -16,7 +15,7 @@ public class FileReaderImpl implements FileReader {
         try {
             return Files.readAllLines(Paths.get(filePath)).stream()
                     .skip(1)
-                    .collect(Collectors.toList());
+                    .toList();
         } catch (IOException e) {
             throw new RuntimeException("Error reading file: " + filePath, e);
         }
